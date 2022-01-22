@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas: 'header header header'
+                       'navbar content content';
+  font-family: sans-serif;
+}

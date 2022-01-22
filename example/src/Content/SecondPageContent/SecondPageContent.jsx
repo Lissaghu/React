@@ -1,6 +1,8 @@
+import styles from './../Content.module.scss'
+
 const SecondPageContent = (props) => {
   return (
-    <div className='App-content'>
+    <div className={styles.content}>
       Second page content
     </div>
   )

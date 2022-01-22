@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
-import './App.css';
+import styles from './App.module.scss'
 import Navbar from '../Navbar/Navbar';
 import Header from '../Header/Header';
 import AppRoute from './AppRoute';
@@ -9,7 +9,7 @@ import AppRoute from './AppRoute';
 function App() {
   return (
     <HashRouter>
-      <div className='App-wrapper'>
+      <div className={styles.wrapper}>
         <Header />
         <Navbar />
         <AppRoute />

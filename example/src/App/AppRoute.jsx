@@ -1,8 +1,8 @@
 import { Routes, Route, Redirect } from 'react-router-dom'
-import FirstPageContent from '../Content/FirstPageContent'
-import NotFoundPage from '../Content/NotFoundPage'
-import SecondPageContent from '../Content/SecondPageContent'
-import ThirdPageContent from '../Content/ThirdPageContent'
+import FirstPageContent from '../Content/FirstPageContent/FirstPageContent'
+import NotFoundPage from '../Content/NotFoundPage/NotFoundPage'
+import SecondPageContent from '../Content/SecondPageContent/SecondPageContent'
+import ThirdPageContent from '../Content/ThirdPageContent/ThirdPageContent'
 
 const AppRoute = (props) => {
   return (
