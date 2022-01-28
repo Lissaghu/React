@@ -5,7 +5,7 @@ const NotFoundPage = (props) => {
   return (
     <div className={notFoundStyles.not_found}>
       <div className={notFoundStyles.not_found_num}>404</div>
-      <span>This page doesn't exist. Go <Link to='/userPage'>home</Link></span>
+      <span>This page doesn't exist. Go <Link to='/'>home</Link></span>
     </div>
   )
 }
