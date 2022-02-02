@@ -1,0 +1,57 @@
+.content {
+  padding: 10px 20px 0;
+
+  h5 {
+    margin: 0 0 10px;
+  }
+
+  .users {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    height: 50px;
+
+    &:first-child {
+      border-top: 1px solid #dbdbdb;
+    }
+  }
+
+  span {
+    font-size: 18px;
+
+    &:first-child {
+      margin: 0 40px 0 20px;
+    }
+  }
+
+  button {
+    margin-right: 20px;
+    width: 70px;
+    height: 40px;
+
+    font-size: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .tasks {
+    background-color: #38c172;
+  }
+
+  .edit {
+    background-color: #feec4a;
+
+    a {
+      color: #303b3e;
+    }
+  }
+
+  .delete {
+    background-color: #e3342f;
+  }
+}

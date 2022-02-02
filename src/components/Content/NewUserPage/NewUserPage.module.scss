@@ -1,0 +1,58 @@
+.content {
+  padding: 20px 20px 0;
+  max-width: 306px;
+
+  font-size: 18px;
+
+  div {
+    margin-bottom: 5px;
+  }
+
+  .lastName {
+    margin-top: 25px;  
+  }
+
+  input {
+    width: 300px;
+    height: 30px;
+
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    &:nth-last-child(1) {
+      display: block;
+    }
+
+    outline: none; 
+  }
+
+  .validation_input {
+    border: 1px solid rgb(255, 122, 122);
+  }
+
+  button {
+    margin: 45px 20px 0 0;
+
+    height: 40px;
+    width: 80px;
+
+    font-size: 16px;
+
+    background-color: rgb(182, 181, 181);
+    
+    a {
+      height: 29px;
+      width: 80px;
+    }
+  }
+
+  .button_create {
+    background-color: #3490dc;
+  }
+
+  .button_disable {
+    background-color: #8dbbe0;
+  }
+}
