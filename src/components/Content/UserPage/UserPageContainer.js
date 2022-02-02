@@ -1,9 +1,11 @@
+import { connect } from "react-redux"
+import { setUsersAC } from "../../../reducers/user-reducer"
 import { useEffect } from "react"
 import axios from "axios"
 
 import UserPage from "./UserPage"
 
-const UserPageAPI = (props) => {
+const UserPageContainer = (props) => {
 
   // useEffect(async () => {
   //   let baseUrl = 'https://61f82792783c1d0017c44601.mockapi.io/api/v1/users'
@@ -21,4 +23,18 @@ const UserPageAPI = (props) => {
   return <UserPage {...props} />
 }
 
-export default UserPageAPI
+const mapStateToProps = (state) => {
+  return {
+    users: state.userPage.users
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setUsers: (users) => {
+      dispatch(setUsersAC(users))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserPageContainer)

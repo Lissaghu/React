@@ -8,13 +8,13 @@ const NewUserPage = (props) => {
 
   //  Передают значение инпута в state
   let onFirstNameChange = (e) => {
-    let text = e.target.value
-    props.addFirstNameText(text)
+    let firstName = e.target.value
+    props.addUserName(firstName, props.lastNameText)
   }
 
   let onLastNameChange = (e) => {
-    let text = e.target.value
-    props.addLastNameText(text)
+    let lastName = e.target.value
+    props.addUserName(props.firstNameText, lastName)
   }
 
   let addUser = () => {

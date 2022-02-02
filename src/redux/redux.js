@@ -12,4 +12,3 @@ let reducers = combineReducers({
 let store = createStore(reducers, composeWithDevTools())
 
 export default store
-

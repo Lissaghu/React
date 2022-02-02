@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import NotFoundPage from '../Content/NotFoundPage/NotFoundPage'
 import TasksPage from '../Content/TasksPage/TasksPage'
 import { NewUserPageContainer } from '../Content/NewUserPage/NewUserPageContainer'
-import { UserPageContainer } from '../Content/UserPage/UserPageContainer'
+import UserPageContainer from '../Content/UserPage/UserPageContainer'
 
 const AppRoute = (props) => {
   return (

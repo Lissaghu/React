@@ -1,11 +1,11 @@
 import { connect } from "react-redux"
 import NewUserPage from "./NewUserPage"
-import { firstNameAC, lastNameAC, createUserAC, cancelUserAC } from "../../../reducers/newUser-reducer"
+import { userNameAC, createUserAC, cancelUserAC } from "../../../reducers/newUser-reducer"
 
 const mapStateToProps = (state) => {
   return {
-    firstNameText: state.newUserPage.firstNameText,
-    lastNameText: state.newUserPage.lastNameText
+    firstNameText: state.newUserPage.userName.firstNameText,
+    lastNameText: state.newUserPage.userName.lastNameText
   }
 }
 
@@ -17,11 +17,8 @@ const mapDispatchToProps = (dispatch) => {
     cancelUser: () => {
       dispatch(cancelUserAC())
     },
-    addFirstNameText: (text) => {
-      dispatch(firstNameAC(text))
-    },
-    addLastNameText: (text) => {
-      dispatch(lastNameAC(text))
+    addUserName: (firstName, lastName) => {
+      dispatch(userNameAC(firstName, lastName))
     }
   }
 }
