@@ -1,14 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
-import UserPage from '../Content/UserPage/UserPage'
+
 import NotFoundPage from '../Content/NotFoundPage/NotFoundPage'
 import TasksPage from '../Content/TasksPage/TasksPage'
 import { NewUserPageContainer } from '../Content/NewUserPage/NewUserPageContainer'
+import { UserPageContainer } from '../Content/UserPage/UserPageContainer'
 
 const AppRoute = (props) => {
   return (
     <>
       <Routes>
-        <Route path='/' element={<UserPage />} />
+        <Route path='/' element={<UserPageContainer />} />
         <Route path='/newUser' element={<NewUserPageContainer />} />
         <Route path='/tasks' element={<TasksPage />} />
         <Route path='*' element={<NotFoundPage />} />

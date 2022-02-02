@@ -3,7 +3,7 @@ const ADD_LAST_NAME = 'ADD_LAST_NAME'
 const CREATE_USER = 'CREATE_USER'
 const CANCEL_USER = 'CANCEL_USER'
 
-let newUserPage = {
+const initialState = {
   users: [
     // { id: 0, firstName: '', lastName: ''}
   ],
@@ -11,7 +11,7 @@ let newUserPage = {
   lastNameText: ''
 }
 
-const newUserReducer = (state = newUserPage, action) => {
+const newUserReducer = (state = initialState, action) => {
   switch(action.type) {
     case ADD_FIRST_NAME:
       return {
@@ -29,10 +29,13 @@ const newUserReducer = (state = newUserPage, action) => {
         lastName: state.lastNameText
       }
       users.push(newUser)
-
       // очищаем инпуты после добавления нового пользователя
       state.firstNameText = ''
       state.lastNameText = ''
+      // добавляем нового пользователя в БД
+      axios.post('https://61f82792783c1d0017c44601.mockapi.io/api/v1/users', {
+        users: users 
+      })
       return {
         ...state, users
       }
@@ -49,11 +52,8 @@ export default newUserReducer
 export const firstNameAC = (text) => (
   {type: ADD_FIRST_NAME, text}
 )
-
 export const lastNameAC = (text) => (
   {type: ADD_LAST_NAME, text}
 )
-
 export const createUserAC = () => ({type: CREATE_USER})
-
 export const cancelUserAC = () => ({type: CANCEL_USER})

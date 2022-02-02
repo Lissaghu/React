@@ -5,7 +5,9 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <span>Task Manager</span>
-      <Link to='/newUser'><button>New user</button></Link>
+      <button>
+        <Link to='/newUser'>New user</Link>
+      </button>
     </header>
   )
 }

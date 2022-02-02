@@ -1,9 +1,11 @@
+const LabelInput = ({ text, validationStyle, style, onChange, name }) => {
+  // если меньше одного символа, то мы присваиваем инпуту данный класс
+  let validationClass = !(/\w+|\d+|[а-яА-Я]+/gi).test(text) ? validationStyle : null
 
-const LabelInput = (props) => {
   return (
     <label>
-      <div className={props.style}>{props.name}</div>
-      <input onChange={props.onChange} value={props.text} />
+      <div className={style}>{name}</div>
+      <input onChange={onChange} value={text} className={validationClass} />
     </label>
   )
 }

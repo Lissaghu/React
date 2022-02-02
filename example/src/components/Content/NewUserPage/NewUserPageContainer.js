@@ -1,4 +1,3 @@
-import React from "react"
 import { connect } from "react-redux"
 import NewUserPage from "./NewUserPage"
 import { firstNameAC, lastNameAC, createUserAC, cancelUserAC } from "../../../reducers/newUser-reducer"

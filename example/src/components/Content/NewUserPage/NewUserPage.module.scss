@@ -24,6 +24,12 @@
     &:nth-last-child(1) {
       display: block;
     }
+
+    outline: none; 
+  }
+
+  .validation_input {
+    border: 1px solid rgb(255, 122, 122);
   }
 
   button {
@@ -35,9 +41,18 @@
     font-size: 16px;
 
     background-color: rgb(182, 181, 181);
+    
+    a {
+      height: 29px;
+      width: 80px;
+    }
   }
 
-  .create_button {
+  .button_create {
     background-color: #3490dc;
+  }
+
+  .button_disable {
+    background-color: #8dbbe0;
   }
 }
