@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 import styles from './App.module.scss'
-import Header from './components/Header/Header';
-import AppRoute from './components/AppRoute/AppRoute';
+import Header from './components/Header/Header'
+import AppRoute from './components/AppRoute/AppRoute'
+import 'rsuite/dist/rsuite.min.css'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Header />
       <AppRoute />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

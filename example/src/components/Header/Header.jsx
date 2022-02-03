@@ -6,7 +6,7 @@ const Header = (props) => {
     <header className={styles.header}>
       <span>Task Manager</span>
       <button>
-        <Link to='/newUser'>New user</Link>
+        <Link to='/new-user'>New user</Link>
       </button>
     </header>
   )
