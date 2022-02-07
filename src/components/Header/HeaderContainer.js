@@ -22,7 +22,7 @@ const HeaderContainer = (props) => {
   
   // получаем данные из БД и отправляем их в массив users в state
   useEffect(() => {
-    setTimeout(() => props.getUsersThunkCreator(), 200)
+    setTimeout(() => props.getUsersThunkCreator(), 500)
   }, [isCreate])
   
   return <Header {...props} setIsCreate={setIsCreate} isCreate={isCreate}/>
