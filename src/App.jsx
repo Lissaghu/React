@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './App.module.scss'
-import Header from './components/Header/Header';
 import AppRoute from './components/AppRoute/AppRoute';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 
 function App() {
   return (
     <div className={styles.wrapper}>
-      <Header />
+      <HeaderContainer />
       <AppRoute />
     </div>
   );

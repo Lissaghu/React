@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import notFoundStyles from './NotFoundPage.module.scss'
+import notFoundStyles from './NotFound.module.scss'
 
-const NotFoundPage = (props) => {
+const NotFound = (props) => {
   return (
     <div className={notFoundStyles.not_found}>
       <div className={notFoundStyles.not_found_num}>404</div>
@@ -10,4 +10,4 @@ const NotFoundPage = (props) => {
   )
 }
 
-export default NotFoundPage
+export default NotFound

@@ -1,14 +1,13 @@
-import { createStore, combineReducers } from "redux"
+import { createStore, combineReducers, applyMiddleware } from "redux"
 import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from "redux-thunk"
 
-import newUserReducer from '../reducers/newUser-reducer'
-import userReduser from '../reducers/user-reducer'
+import newUserReducer from '../reducers/user-reducer'
 
 let reducers = combineReducers({
-  newUserPage: newUserReducer,
-  userPage: userReduser
+  newUser: newUserReducer,
 })
 
-let store = createStore(reducers, composeWithDevTools())
+let store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)))
 
 export default store

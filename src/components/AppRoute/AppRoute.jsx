@@ -1,18 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
 
-import NotFoundPage from '../Content/NotFoundPage/NotFoundPage'
-import TasksPage from '../Content/TasksPage/TasksPage'
-import { NewUserPageContainer } from '../Content/NewUserPage/NewUserPageContainer'
-import UserPageContainer from '../Content/UserPage/UserPageContainer'
+import NotFound from '../Pages/NotFound/NotFound'
+import Tasks from '../Pages/Tasks/Tasks'
+import UsersContainer from '../Pages/Users/UsersContainer'
 
 const AppRoute = (props) => {
   return (
     <>
       <Routes>
-        <Route path='/' element={<UserPageContainer />} />
-        <Route path='/newUser' element={<NewUserPageContainer />} />
-        <Route path='/tasks' element={<TasksPage />} />
-        <Route path='*' element={<NotFoundPage />} />
+        <Route path='/' element={<UsersContainer />} />
+        <Route path='/tasks' element={<Tasks />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   )

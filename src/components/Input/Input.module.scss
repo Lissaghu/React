@@ -1,0 +1,45 @@
+.modal_header {
+  padding: 20px;
+  font-size: 23px;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.modal_form {
+  font-size: 18px;
+  padding: 20px;
+
+  input {
+    width: 400px;
+    height: 30px;
+
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    outline: none; 
+
+    &:nth-last-child(1) {
+      display: block;
+    }
+  }
+
+  .validation_input {
+    border: 1px solid rgb(255, 122, 122);
+  }    
+
+  .lastName {
+    margin-top: 25px;  
+  }
+
+  div {
+    margin-bottom: 5px;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+
+    font-size: 16px;
+  }
+}
