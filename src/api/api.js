@@ -11,5 +11,8 @@ export const usersAPI = {
       firstName,
       lastName
     })
-  }
+  },
+  async deleteUser(userId) {
+    return await axios.delete(baseUrl + userId)
+  },
 }

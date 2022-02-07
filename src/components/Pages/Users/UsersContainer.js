@@ -7,8 +7,28 @@ import { usersAPI } from "../../../api/api"
 
 const UserContainer = (props) => {
 
+  // Передаём сюда id пользователя, которого хотим удалить
+  const [userId, setUserId] = useState('')
 
-  return <Users {...props} />
+  // Флаг означающий подтвердили ли удаление пользователя
+  const [isDelete, setIsDelete] = useState(false)
+
+  // Удаляем пользователя
+  useEffect(() => {
+    if (!userId) return
+    usersAPI.deleteUser(userId).then(() => {
+      // После удаления обнуляем userId и снова получаем пользователей с БД
+      setUserId('')
+      props.getUsersThunkCreator()
+    })
+  }, [isDelete])
+
+  return <Users 
+            {...props} 
+            setUserId={setUserId}
+            setIsDelete={setIsDelete}
+            isDelete={isDelete}
+          />
 }
 
 const mapStateToProps = (state) => {
