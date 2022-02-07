@@ -15,4 +15,10 @@ export const usersAPI = {
   async deleteUser(userId) {
     return await axios.delete(baseUrl + userId)
   },
+  async editUser(userId, firstName, lastName) {
+    return await axios.put(baseUrl + userId, {
+      firstName,
+      lastName
+    })
+  }
 }

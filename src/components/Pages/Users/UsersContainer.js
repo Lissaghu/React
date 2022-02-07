@@ -13,6 +13,12 @@ const UserContainer = (props) => {
   // Флаг означающий подтвердили ли удаление пользователя
   const [isDelete, setIsDelete] = useState(false)
 
+  // Получаем индекс пользователя, которого хотим изменить
+  // const [userIndex, setUserIndex] = useState(0)
+
+  // флаг, проверяющий нажали ли кнопку Edit в модальном окне
+  let [isEdit, setIsEdit] = useState(false)
+
   // Удаляем пользователя
   useEffect(() => {
     if (!userId) return
@@ -23,11 +29,24 @@ const UserContainer = (props) => {
     })
   }, [isDelete])
 
+  // Редактируем пользователя
+  useEffect(() => {
+    if (!userId) return
+    usersAPI.editUser(userId, props.firstName, props.lastName).then(() => {
+      // После редактирования обнуляем userId и снова получаем пользователей с БД
+      setUserId('')
+      props.getUsersThunkCreator()
+    })
+  }, [isEdit])
+
   return <Users 
             {...props} 
             setUserId={setUserId}
             setIsDelete={setIsDelete}
             isDelete={isDelete}
+            // setUserIndex={setUserIndex}
+            isEdit={isEdit}
+            setIsEdit={setIsEdit}
           />
 }
 
