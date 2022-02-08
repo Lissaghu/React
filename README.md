@@ -1,6 +1,8 @@
 # Project link [Task Manager](https://lissaghu-task-manager.netlify.app/).
 
-#### This project is under development
+### This project is under development. 
+- In this project, I first started using React, React-Router, React Hooks , Redux, React-Redux, Redux-Thunk, Axios, RESTful API.
+#
 
 *What is implemented:*
 - adding users
